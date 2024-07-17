@@ -1,0 +1,28 @@
+#:kivy 2.0
+
+
+<TextInputTestWidget>:
+    BoxLayout:
+        size: root.size
+        orientation: 'vertical'
+        padding: 20
+        canvas.before:
+            Color:
+                rgba: 0.7, 0.7, 0.7, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+
+        TextInput:
+            text:'テキスト１：multiline\nテキスト１：multiline\nテキスト１：multiline\nテキスト１：multiline\nテキスト１：multiline'
+            font_name: 'Mplus1-Medium.ttf'
+            font_size: '20pt'
+            line_spacing: 10
+            lines_to_scroll: 2
+            padding: [20]
+
+        TextInput:
+            text:'テキスト２：multiline\nテキスト２：multiline\nテキスト２：multiline\nテキスト２：multiline\nテキスト２：multiline'
+            font_name: 'Mplus1-Medium.ttf'
+            font_size: '20pt'
+            readonly: True
